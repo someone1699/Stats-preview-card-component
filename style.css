@@ -1,0 +1,127 @@
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%); /*---main background---*/
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /*---card background---*/
+    --Soft-violet: hsl(277, 64%, 61%); /*---accent---*/
+    --White: hsl(0, 0%, 100%); /*---main heading, stats---*/
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /*---main paragraph---*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: var(--Very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__text {
+    padding:  3em 4em;
+    width: 50%;
+    color: var(--Slightly-transparent-white);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.card__text p {
+    line-height: 1.5;
+}
+
+.img {
+    background-image: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+}
+
+.card__img {
+    width: 50%;
+    background-color: hsl(277, 93%, 23%);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5em;
+}
+
+.col p {
+    text-transform: uppercase;
+    margin-top: .5em;
+}
+
+h2 {
+    margin: 0;
+    color: var(--White);
+}
+
+@media (max-width: 40em) {
+    body {
+        font-size: .875rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+    .card {
+        margin: 3em 0;
+        flex-direction: column-reverse;
+        justify-content: stretch;
+        text-align: center;
+    }
+
+    .card__text {
+        width: 100%;
+        padding: 1.5em;
+    }
+    
+    .card__img {
+        width: 100%;
+    }
+    
+    .img {
+        background-image: url(images/image-header-mobile.jpg);
+        min-height: 200px;
+        width: 100%;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
